@@ -1,10 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package classesubmarino;
+
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -13,8 +10,39 @@ package classesubmarino;
 public class ClasseSubmarino {
 
     public static void main(String[] args) {
-        // TODO code application logic here
+        SubmarinoNuclear sn1 = new SubmarinoNuclear();
         
+        JOptionPane.showMessageDialog(null,"Olá capitao do Submarino Nuclear!!!");
+        
+        sn1.profundidadeSubmarino();
+        sn1.modelo();
+        sn1.coordenadas();
+        
+        sn1.quantidadeDeInimigosAbatidos();
+        sn1.quantidadeDeTripulantes();
+        
+        sn1.tipoDeArmaNuclear();
+        sn1.atacar();
+        sn1.codigoSecreto();
+        sn1.mensagemSubmarinoNuclear();
+        sn1.ligarAlertaNuclear();
+        
+        JOptionPane.showMessageDialog(null,"Estamos em outro navio neste momento... Olá capitao do Submarino de Pesquisa!!!");
+        
+        SubmarinoPessquisa sp1 = new SubmarinoPessquisa();
+        
+        sp1.profundidadeSubmarino();
+        sp1.modelo();
+        sp1.coordenadas();
+        
+        sp1.quantidadeDeInimigosAbatidos();
+        sp1.quantidadeDeTripulantes();
+        
+        sp1.tipoDePesquisa();
+        sp1.atacar();
+        sp1.codigoSecreto();
+        
+        sp1.mensagemSubmarinoDePesquisa();
     }
     
 }

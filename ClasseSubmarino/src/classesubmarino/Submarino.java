@@ -7,12 +7,13 @@
 package classesubmarino;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Alexandre Freitas
  */
-abstract public class Submarino {
+public abstract class Submarino {
    
     protected double profundidade;
     protected double latitude;
@@ -66,30 +67,30 @@ abstract public class Submarino {
         this.input = s1.input;
     } 
 
-    //Metodos da Classe Submerino;
-    abstract void codigoSecreto();
-    abstract void atacar();
+    //Metodos da Classe Submarino;
+    protected abstract void codigoSecreto();
+    protected abstract void atacar();
     
-    void profundidadeSubmarino(){
-        System.out.println("Qual a profundidade do Submarino: ");
+    protected void profundidadeSubmarino(){
+        System.out.println("\nQual a profundidade do Submarino: ");
         
         this.profundidade = input.nextDouble();
         
         setProfundidade(profundidade);
     }
 
-    void modelo(){
-        System.out.println("Qual o modelo do Submarino: ");
+    protected void modelo(){
+        System.out.println("\nQual o modelo do Submarino: ");
         
         this.modelo = input.next();
         
         setModelo(modelo);
     }
 
-    void coordenadas(){
-        System.out.println("Indique as coordenadas do Submarino: ");
+    protected void coordenadas(){
+        System.out.println("\nIndique as coordenadas do Submarino: \n");
     
-        System.out.println("\nInforme a Latitude: ");
+        System.out.println("Informe a Latitude: ");
         this.latitude = input.nextDouble();
         setLatitude(latitude);
         
@@ -99,4 +100,9 @@ abstract public class Submarino {
                 
     }
 
+    protected void mensagemSubmarino(){
+        JOptionPane.showMessageDialog(null,"-> Modelo do Submarino: " + getModelo() + "\n-> Profundidade do Submarino: " + getProfundidade() + " metros" 
+                                                + "\n-> Coordenadas do Submarino: [" + getLatitude() + "," + getLongitude() + "]");
+        
+    }
 }
